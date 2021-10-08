@@ -1,3 +1,10 @@
 input {
   margin: .4rem;
 }
+
+
+.bg-cinza {
+background-color: rgb(187, 187, 187);
+width: auto;
+height: 100vh;
+}

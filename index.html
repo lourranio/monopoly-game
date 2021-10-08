@@ -21,7 +21,7 @@
 <body>
 
 
-  <div class="container container-fluid mt-5">
+  <div class="container container-fluid mt-5 bg-cinza">
     <div id="popupbackground"></div>
     <div id="popupwrap">
       <div id="popup">
@@ -271,7 +271,7 @@
 
     <div id="setup">
       <div style="margin-bottom: 20px;">
-        Select number of players.
+        <h1> Select number of players.</h1>
         <select id="playernumber" title="Select the number of players for the game.">
           <option>2</option>
           <option>3</option>
@@ -283,10 +283,9 @@
         </select>
       </div>
 
-      <div id="player1input" class="player-input">Player 1
+      <div id="player1input" class="player-input">Player 1:
         <input type="text" id="player1name" title="Player name" maxlength="16" value="Alonso" />
-        <input type="color" id="player1color" title="Player name" name="head" value="#e66465" id="player1name">
-
+        <input type="color" id="player1color" title="Player name" name="head" value="#70F93E" id="player1name">
 
         <select id="player1ai" title="Choose whether this player is controled by a human or by the computer."
           onclick="document.getElementById('player1name').disabled = this.value !== '0';">
@@ -297,65 +296,33 @@
 
       <div id="player2input" class="player-input">
         Player 2: <input type="text" id="player2name" title="Player name" maxlength="16" value="Player 2" />
-        <input type="color" id="player2color" title="Player name" name="head" value="#000000" id="player2name">
+        <input type="color" id="player2color" title="Player name" name="head" value="#6273F5" id="player2name">
         <select id="player2ai" title="Choose whether this player is controled by a human or by the computer."
           onclick="document.getElementById('player2name').disabled = this.value !== '0';">
-          <option value="0" selected="selected">Human</option>
-          <option value="1">AI (Test)</option>
+          <option value="0" selected="selected">Humano</option>
+          <option value="1">Computador</option>
         </select>
       </div>
 
       <div id="player3input" class="player-input">
         Player 3: <input type="text" id="player3name" title="Player name" maxlength="16" value="Player 3" />
-        <select id="player3color" title="Player color">
-          <option style="color: aqua;">Aqua</option>
-          <option style="color: black;">Black</option>
-          <option style="color: blue;">Blue</option>
-          <option style="color: fuchsia;">Fuchsia</option>
-          <option style="color: gray;">Gray</option>
-          <option style="color: green;">Green</option>
-          <option style="color: lime;">Lime</option>
-          <option style="color: maroon;">Maroon</option>
-          <option style="color: navy;">Navy</option>
-          <option style="color: olive;">Olive</option>
-          <option style="color: orange;">Orange</option>
-          <option style="color: purple;">Purple</option>
-          <option selected="selected" style="color: red;">Red</option>
-          <option style="color: silver;">Silver</option>
-          <option style="color: teal;">Teal</option>
-          <option style="color: yellow;">Yellow</option>
-        </select>
+        <input type="color" id="player3color" title="Player name" name="head" value="#F5313C" id="player3name">
         <select id="player3ai" title="Choose whether this player is controled by a human or by the computer."
           onclick="document.getElementById('player3name').disabled = this.value !== '0';">
-          <option value="0" selected="selected">Human</option>
-          <option value="1">AI (Test)</option>
+          <option value="0" selected="selected">Humano</option>
+          <option value="1">Computador</option>
         </select>
       </div>
 
       <div id="player4input" class="player-input">
         Player 4: <input type="text" id="player4name" title="Player name" maxlength="16" value="Player 4" />
-        <select id="player4color" title="Player color">
-          <option style="color: aqua;">Aqua</option>
-          <option style="color: black;">Black</option>
-          <option style="color: blue;">Blue</option>
-          <option style="color: fuchsia;">Fuchsia</option>
-          <option style="color: gray;">Gray</option>
-          <option style="color: green;">Green</option>
-          <option selected="selected" style="color: lime;">Lime</option>
-          <option style="color: maroon;">Maroon</option>
-          <option style="color: navy;">Navy</option>
-          <option style="color: olive;">Olive</option>
-          <option style="color: orange;">Orange</option>
-          <option style="color: purple;">Purple</option>
-          <option style="color: red;">Red</option>
-          <option style="color: silver;">Silver</option>
-          <option style="color: teal;">Teal</option>
-          <option style="color: yellow;">Yellow</option>
-        </select>
+
+        <input type="color" id="player4color" title="Player name" name="head" value="#F5CB3D" id="player4name">
+
         <select id="player4ai" title="Choose whether this player is controled by a human or by the computer."
           onclick="document.getElementById('player4name').disabled = this.value !== '0';">
-          <option value="0" selected="selected">Human</option>
-          <option value="1">AI (Test)</option>
+          <option value="0" selected="selected">Humano</option>
+          <option value="1">Computador</option>
         </select>
       </div>
 
@@ -381,7 +348,7 @@
         </select>
         <select id="player5ai" title="Choose whether this player is controled by a human or by the computer."
           onclick="document.getElementById('player5name').disabled = this.value !== '0';">
-          <option value="0" selected="selected">Human</option>
+          <option value="0" selected="selected">Humano</option>
           <option value="1">AI (Test)</option>
         </select>
       </div>
@@ -408,7 +375,7 @@
         </select>
         <select id="player6ai" title="Choose whether this player is controled by a human or by the computer."
           onclick="document.getElementById('player6name').disabled = this.value !== '0';">
-          <option value="0" selected="selected">Human</option>
+          <option value="0" selected="selected">Humano</option>
           <option value="1">AI (Test)</option>
         </select>
       </div>
@@ -435,7 +402,7 @@
         </select>
         <select id="player7ai" title="Choose whether this player is controled by a human or by the computer."
           onclick="document.getElementById('player7name').disabled = this.value !== '0';">
-          <option value="0" selected="selected">Human</option>
+          <option value="0" selected="selected">Humano</option>
           <option value="1">AI (Test)</option>
         </select>
       </div>
@@ -462,7 +429,7 @@
         </select>
         <select id="player8ai" title="Choose whether this player is controled by a human or by the computer."
           onclick="document.getElementById('player8name').disabled = this.value !== '0';">
-          <option value="0" selected="selected">Human</option>
+          <option value="0" selected="selected">Humano</option>
           <option value="1">AI (Test)</option>
         </select>
       </div>
