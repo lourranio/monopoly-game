@@ -18,10 +18,10 @@
   <link rel="stylesheet" type="text/css" href="./js/bootstrap.js" />
 </head>
 
-<body>
+<body class="bg-cinza">
 
 
-  <div class="container container-fluid mt-5 bg-cinza">
+  <div class="container  mt-5 bg-white">
     <div id="popupbackground"></div>
     <div id="popupwrap">
       <div id="popup">
@@ -204,27 +204,6 @@
               <div>$<span id="p1money">1500</span></div>
             </td>
           </tr>
-
-          <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-            <div class="card-header" id="p1moneyname"></div> <!-- Aqui é o |TITULO do nome do jogador-->
-            <div class="card-body">
-              <h5 class="card-title">
-                <div>Valor R$<span id="p1money">1500</span></div>
-              </h5>
-              <p class="card-text">
-              <div>Ações: <span id="p1money">1500</span></div>
-              </p>
-            </div>
-          </div>
-          <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
-            <div class="card-header">Header</div>
-            <div class="card-body">
-              <h5 class="card-title">Secondary card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-            </div>
-          </div>
-
           <tr id="moneybarrow2" class="money-bar-row">
             <td class="moneybararrowcell"><img src="images/arrow.png" id="p2arrow" class="money-bar-arrow" alt=">" />
             </td>
@@ -249,65 +228,47 @@
               <div>$<span id="p4money">1500</span></div>
             </td>
           </tr>
-          <tr id="moneybarrow5" class="money-bar-row">
-            <td class="moneybararrowcell"><img src="images/arrow.png" id="p5arrow" class="money-bar-arrow" alt=">" />
-            </td>
-            <td id="p5moneybar" class="moneybarcell">
-              <div><span id="p5moneyname">Player 5</span>:</div>
-              <div>$<span id="p5money">1500</span></div>
-            </td>
-          </tr>
-          <tr id="moneybarrow6" class="money-bar-row">
-            <td class="moneybararrowcell"><img src="images/arrow.png" id="p6arrow" class="money-bar-arrow" alt=">" />
-            </td>
-            <td id="p6moneybar" class="moneybarcell">
-              <div><span id="p6moneyname">Player 6</span>:</div>
-              <div>$<span id="p6money">1500</span></div>
-            </td>
-          </tr>
-          <tr id="moneybarrow7" class="money-bar-row">
-            <td class="moneybararrowcell"><img src="images/arrow.png" id="p7arrow" class="money-bar-arrow" alt=">" />
-            </td>
-            <td id="p7moneybar" class="moneybarcell">
-              <div><span id="p7moneyname">Player 7</span>:</div>
-              <div>$<span id="p7money">1500</span></div>
-            </td>
-          </tr>
-          <tr id="moneybarrow8" class="money-bar-row">
-            <td class="moneybararrowcell"><img src="images/arrow.png" id="p8arrow" class="money-bar-arrow" alt=">" />
-            </td>
-            <td id="p8moneybar" class="moneybarcell">
-              <div><span id="p8moneyname">Player 8</span>:</div>
-              <div>$<span id="p8money">1500</span></div>
-            </td>
-          </tr>
+
           <tr id="moneybarrowbutton">
             <td class="moneybararrowcell">&nbsp;</td>
             <td style="border: none;">
               <button type="button" class="btn btn-dark" id="viewstats" value="View stats">VER STATUS</button>
             </td>
           </tr>
+
+
+
         </table>
+
       </div>
+
+
     </div>
 
-    <div id="setup">
-      <div style="margin-bottom: 20px;">
-        <h1> Select number of players.</h1>
-        <select id="playernumber" title="Select the number of players for the game.">
-          <option>2</option>
-          <option>3</option>
-          <option selected="selected">4</option>
-          <option>5</option>
-          <option>6</option>
-          <option>7</option>
-          <option>8</option>
-        </select>
+    <div id="setup" class="p-5">
+
+      <div class="row ">
+
+        <div>
+          <h1> Quantos jogadores na partida ?</h1>
+        </div>
+
+        <div class="col-3">
+          <select id="playernumber" title="Select the number of players for the game."
+            class=" cols-1 form-select form-select-lg mb-3 bg-warning">
+            <option>2</option>
+            <option>3</option>
+            <option selected="selected">4</option>
+          </select>
+        </div>
       </div>
+
+
+
 
       <div id="player1input" class="player-input">Player 1:
         <input type="text" id="player1name" title="Player name" maxlength="16" value="Alonso" />
-        <input type="color" id="player1color" title="Player name" name="head" value="#70F93E" id="player1name">
+        <input type="color" id="player1color" title="Player name" name="head" value="#70F93E">
 
         <select id="player1ai" title="Choose whether this player is controled by a human or by the computer."
           onclick="document.getElementById('player1name').disabled = this.value !== '0';">
@@ -348,113 +309,6 @@
         </select>
       </div>
 
-      <div id="player5input" class="player-input">
-        Player 5: <input type="text" id="player5name" title="Player name" maxlength="16" value="Player 5" />
-        <select id="player5color" title="Player color">
-          <option style="color: aqua;">Aqua</option>
-          <option style="color: black;">Black</option>
-          <option style="color: blue;">Blue</option>
-          <option style="color: fuchsia;">Fuchsia</option>
-          <option style="color: gray;">Gray</option>
-          <option selected="selected" style="color: green;">Green</option>
-          <option style="color: lime;">Lime</option>
-          <option style="color: maroon;">Maroon</option>
-          <option style="color: navy;">Navy</option>
-          <option style="color: olive;">Olive</option>
-          <option style="color: orange;">Orange</option>
-          <option style="color: purple;">Purple</option>
-          <option style="color: red;">Red</option>
-          <option style="color: silver;">Silver</option>
-          <option style="color: teal;">Teal</option>
-          <option style="color: yellow;">Yellow</option>
-        </select>
-        <select id="player5ai" title="Choose whether this player is controled by a human or by the computer."
-          onclick="document.getElementById('player5name').disabled = this.value !== '0';">
-          <option value="0" selected="selected">Humano</option>
-          <option value="1">AI (Test)</option>
-        </select>
-      </div>
-
-      <div id="player6input" class="player-input">
-        Player 6: <input type="text" id="player6name" title="Player name" maxlength="16" value="Player 6" />
-        <select id="player6color" title="Player color">
-          <option selected="selected" style="color: aqua;">Aqua</option>
-          <option style="color: black;">Black</option>
-          <option style="color: blue;">Blue</option>
-          <option style="color: fuchsia;">Fuchsia</option>
-          <option style="color: gray;">Gray</option>
-          <option style="color: green;">Green</option>
-          <option style="color: lime;">Lime</option>
-          <option style="color: maroon;">Maroon</option>
-          <option style="color: navy;">Navy</option>
-          <option style="color: olive;">Olive</option>
-          <option style="color: orange;">Orange</option>
-          <option style="color: purple;">Purple</option>
-          <option style="color: red;">Red</option>
-          <option style="color: silver;">Silver</option>
-          <option style="color: teal;">Teal</option>
-          <option style="color: yellow;">Yellow</option>
-        </select>
-        <select id="player6ai" title="Choose whether this player is controled by a human or by the computer."
-          onclick="document.getElementById('player6name').disabled = this.value !== '0';">
-          <option value="0" selected="selected">Humano</option>
-          <option value="1">AI (Test)</option>
-        </select>
-      </div>
-
-      <div id="player7input" class="player-input">
-        Player 7: <input type="text" id="player7name" title="Player name" maxlength="16" value="Player 7" />
-        <select id="player7color" title="Player color">
-          <option style="color: aqua;">Aqua</option>
-          <option style="color: black;">Black</option>
-          <option style="color: blue;">Blue</option>
-          <option style="color: fuchsia;">Fuchsia</option>
-          <option style="color: gray;">Gray</option>
-          <option style="color: green;">Green</option>
-          <option style="color: lime;">Lime</option>
-          <option style="color: maroon;">Maroon</option>
-          <option style="color: navy;">Navy</option>
-          <option style="color: olive;">Olive</option>
-          <option selected="selected" style="color: orange;">Orange</option>
-          <option style="color: purple;">Purple</option>
-          <option style="color: red;">Red</option>
-          <option style="color: silver;">Silver</option>
-          <option style="color: teal;">Teal</option>
-          <option style="color: yellow;">Yellow</option>
-        </select>
-        <select id="player7ai" title="Choose whether this player is controled by a human or by the computer."
-          onclick="document.getElementById('player7name').disabled = this.value !== '0';">
-          <option value="0" selected="selected">Humano</option>
-          <option value="1">AI (Test)</option>
-        </select>
-      </div>
-
-      <div id="player8input" class="player-input">
-        Player 8: <input type="text" id="player8name" title="Player name" maxlength="16" value="Player 8" />
-        <select id="player8color" title="Player color">
-          <option style="color: aqua;">Aqua</option>
-          <option style="color: black;">Black</option>
-          <option style="color: blue;">Blue</option>
-          <option style="color: fuchsia;">Fuchsia</option>
-          <option style="color: gray;">Gray</option>
-          <option style="color: green;">Green</option>
-          <option style="color: lime;">Lime</option>
-          <option style="color: maroon;">Maroon</option>
-          <option style="color: navy;">Navy</option>
-          <option style="color: olive;">Olive</option>
-          <option style="color: orange;">Orange</option>
-          <option selected="selected" style="color: purple;">Purple</option>
-          <option style="color: red;">Red</option>
-          <option style="color: silver;">Silver</option>
-          <option style="color: teal;">Teal</option>
-          <option style="color: yellow;">Yellow</option>
-        </select>
-        <select id="player8ai" title="Choose whether this player is controled by a human or by the computer."
-          onclick="document.getElementById('player8name').disabled = this.value !== '0';">
-          <option value="0" selected="selected">Humano</option>
-          <option value="1">AI (Test)</option>
-        </select>
-      </div>
 
       <div style="margin: 20px 0px;">
         <!-- <input type="button" value="Start Game" onclick="setup();" title="Begin playing." /> -->
@@ -466,37 +320,40 @@
       <div id="noF5">Nota: Atualizar esta página ou navegar para fora dela pode encerrar o jogo sem aviso prévio. </div>
     </div>
 
+
+
+
+
     <div id="control">
-      <table class="btn-light mb-3">
+      <table class=" ">
+        <!-- Quadro do MEIO -->
         <tr>
           <td>
             <!-- <td style="text-align: center; vertical-align: center; border: none;"></td> -->
             <div id="menu">
-              <table id="menutable" cellspacing="0" class="btn-light mb-3">
+              <table id="menutable" cellspacing="0">
                 <tr>
-                  <td class="menu-item" id="buy-menu-item">
-                    <a class="btn btn-outline-success " href="javascript:void(0);" role="button">Comprar</a>
+                  <td class="menu-item bg-sucess" id="buy-menu-item">
+                    <div class="p-1 align-items-center justify-content-centers">Comprar</div>
                   </td>
 
-                  <td class="menu-item" id="manage-menu-item">
 
-                    <a class="btn btn-outline-info" href="javascript:void(0);" role="button"
-                      title="View, mortgage, and improve your property.">Manage</a>
-
+                  <td class="menu-item bg-secondary" id="manage-menu-item">
+                    <div class="h6 p-1">Gerir</div>
                   </td>
 
-                  <td class="menu-item" id="trade-menu-item">
-                    <a href="javascript:void(0);" title="Exchange property with other players."
-                      class="btn btn-outline-warning ">Trade</a>
+                  <td class="menu-item bg-warning" id="trade-menu-item">
+                    <div class="h6 p-1">Trocar</div>
                   </td>
 
                 </tr>
               </table>
             </div>
 
-            <div id="buy">
-              <div id="alert"></div>
-              <div id="landed"></div>
+            <div class="bg-white">
+              <div id="buy" class="bg-info"></div>
+              <div id="alert" class="bg-white"></div>
+              <div id="landed" class="bg-white"></div>
             </div>
 
             <div id="manage">
@@ -537,7 +394,7 @@
       </table>
     </div>
 
-    <div id="trade">
+    <div id="trade" class="p-3">
       <table style="border-spacing: 3px;">
         <tr>
           <td class="trade-cell">
