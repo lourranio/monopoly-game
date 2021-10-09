@@ -191,6 +191,8 @@
       </tr>
     </table>
 
+
+
     <div id="moneybarwrap">
       <div id="moneybar">
         <table>
@@ -202,6 +204,27 @@
               <div>$<span id="p1money">1500</span></div>
             </td>
           </tr>
+
+          <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+            <div class="card-header" id="p1moneyname"></div> <!-- Aqui é o |TITULO do nome do jogador-->
+            <div class="card-body">
+              <h5 class="card-title">
+                <div>Valor R$<span id="p1money">1500</span></div>
+              </h5>
+              <p class="card-text">
+              <div>Ações: <span id="p1money">1500</span></div>
+              </p>
+            </div>
+          </div>
+          <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+            <div class="card-header">Header</div>
+            <div class="card-body">
+              <h5 class="card-title">Secondary card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            </div>
+          </div>
+
           <tr id="moneybarrow2" class="money-bar-row">
             <td class="moneybararrowcell"><img src="images/arrow.png" id="p2arrow" class="money-bar-arrow" alt=">" />
             </td>
@@ -261,8 +284,7 @@
           <tr id="moneybarrowbutton">
             <td class="moneybararrowcell">&nbsp;</td>
             <td style="border: none;">
-              <input type="button" id="viewstats" value="View stats"
-                title="View a pop-up window that shows a list of each player's properties." />
+              <button type="button" class="btn btn-dark" id="viewstats" value="View stats">VER STATUS</button>
             </td>
           </tr>
         </table>
@@ -441,18 +463,19 @@
         </div>
       </div>
 
-      <div id="noF5">Note: Refreshing this page or navigating away from it may end your game without warning.</div>
+      <div id="noF5">Nota: Atualizar esta página ou navegar para fora dela pode encerrar o jogo sem aviso prévio. </div>
     </div>
 
     <div id="control">
-      <table>
+      <table class="btn-light mb-3">
         <tr>
-          <td style="text-align: center; vertical-align: center; border: none;">
+          <td>
+            <!-- <td style="text-align: center; vertical-align: center; border: none;"></td> -->
             <div id="menu">
-              <table id="menutable" cellspacing="0">
+              <table id="menutable" cellspacing="0" class="btn-light mb-3">
                 <tr>
                   <td class="menu-item" id="buy-menu-item">
-                    <a class="btn btn-outline-success" href="javascript:void(0);" role="button">Comprar</a>
+                    <a class="btn btn-outline-success " href="javascript:void(0);" role="button">Comprar</a>
                   </td>
 
                   <td class="menu-item" id="manage-menu-item">
@@ -463,7 +486,8 @@
                   </td>
 
                   <td class="menu-item" id="trade-menu-item">
-                    <a href="javascript:void(0);" title="Exchange property with other players.">Trade</a>
+                    <a href="javascript:void(0);" title="Exchange property with other players."
+                      class="btn btn-outline-warning ">Trade</a>
                   </td>
 
                 </tr>
@@ -487,8 +511,10 @@
           </td>
           <td style="vertical-align: top; border: none;">
             <div id="quickstats">
+              <!-- Aquele quadrao Interno pequeno no centro-->
               <div><span id="pname">Player 1</span>:</div>
               <div><span id="pmoney">$1500</span></div>
+
             </div>
             <div>
               <div id="die0" title="Die" class="die die-no-img"></div>
